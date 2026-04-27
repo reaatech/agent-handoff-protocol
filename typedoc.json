@@ -1,0 +1,19 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "docs/api",
+  "plugin": [],
+  "readme": "README.md",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "hideGenerator": true,
+  "sort": ["source-order"],
+  "kindSortOrder": ["Document", "Project"],
+  "categorizeByGroup": true,
+  "defaultCategory": "Other",
+  "categoryOrder": ["Core", "Compression", "Routing", "Transport", "Validation", "Utils", "Other"],
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": false
+  }
+}

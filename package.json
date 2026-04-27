@@ -1,0 +1,97 @@
+{
+  "name": "agent-handoff-protocol",
+  "version": "1.0.0",
+  "description": "A small, opinionated TypeScript library for transferring conversations from one agent to another mid-session.",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src tests",
+    "lint:fix": "eslint src tests --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "docs": "typedoc",
+    "benchmark": "vitest bench",
+    "prepublishOnly": "pnpm run clean && pnpm run build && pnpm run test"
+  },
+  "keywords": [
+    "agent",
+    "handoff",
+    "mcp",
+    "a2a",
+    "multi-agent",
+    "routing",
+    "orchestration"
+  ],
+  "author": "Rick Somers <rick@reaatech.com> (https://reaatech.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reaatech/agent-handoff-protocol.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reaatech/agent-handoff-protocol/issues"
+  },
+  "homepage": "https://github.com/reaatech/agent-handoff-protocol#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "@typescript-eslint/parser": "^8.8.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "eslint": "^9.11.0",
+    "husky": "^9.1.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.3.0",
+    "tsup": "^8.3.0",
+    "typedoc": "^0.28.19",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.59.0",
+    "vitest": "^2.1.0"
+  },
+  "peerDependencies": {
+    "zod": "^3.23.0"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,json,md}": [
+      "prettier --write"
+    ],
+    "*.{ts,js}": [
+      "eslint --fix"
+    ]
+  }
+}
