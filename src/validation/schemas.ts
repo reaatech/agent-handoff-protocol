@@ -166,6 +166,7 @@ export function validateCompatibilityManual(
   const errors: string[] = [];
 
   // Check language compatibility
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   const userLang = payload.userMetadata?.language;
   if (userLang && !targetAgent.languages.some((l) => l.toLowerCase() === userLang.toLowerCase())) {
     errors.push(`Agent does not support language: ${userLang}`);
