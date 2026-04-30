@@ -1,57 +1,27 @@
 {
   "name": "agent-handoff-protocol",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "private": true,
   "description": "A small, opinionated TypeScript library for transferring conversations from one agent to another mid-session.",
   "type": "module",
-  "sideEffects": false,
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
-    }
-  },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md"
-  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "lint": "eslint src tests",
-    "lint:fix": "eslint src tests --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "typecheck": "tsc --noEmit",
-    "clean": "rm -rf dist",
-    "docs": "typedoc",
-    "benchmark": "vitest bench",
-    "prepublishOnly": "pnpm run clean && pnpm run build && pnpm run test"
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "test:coverage": "turbo run test:coverage",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish",
+    "benchmark": "turbo run benchmark"
   },
-  "keywords": [
-    "agent",
-    "handoff",
-    "mcp",
-    "a2a",
-    "multi-agent",
-    "routing",
-    "orchestration"
-  ],
+  "keywords": ["agent", "handoff", "mcp", "a2a", "multi-agent", "routing", "orchestration"],
   "author": "Rick Somers <rick@reaatech.com> (https://reaatech.com)",
   "license": "MIT",
+  "packageManager": "pnpm@10.22.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/reaatech/agent-handoff-protocol.git"
@@ -61,37 +31,16 @@
   },
   "homepage": "https://github.com/reaatech/agent-handoff-protocol#readme",
   "devDependencies": {
-    "@commitlint/cli": "^20.5.2",
-    "@commitlint/config-conventional": "^20.5.0",
-    "@eslint/js": "^9.39.4",
-    "@types/node": "^25.6.0",
-    "@typescript-eslint/eslint-plugin": "^8.8.0",
-    "@typescript-eslint/parser": "^8.59.1",
-    "@vitest/coverage-v8": "^2.1.0",
-    "eslint": "^10.2.1",
-    "husky": "^9.1.0",
-    "lint-staged": "^16.4.0",
-    "prettier": "^3.3.0",
-    "tsup": "^8.3.0",
-    "typedoc": "^0.28.19",
-    "typescript": "^5.6.0",
-    "typescript-eslint": "^8.59.1",
-    "vitest": "^2.1.0"
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.28.1",
+    "@vitest/coverage-v8": "3.2.4",
+    "@types/node": "^22.0.0",
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
   },
-  "peerDependencies": {
-    "zod": "^3.23.0"
-  },
-  "peerDependenciesMeta": {
-    "zod": {
-      "optional": true
-    }
-  },
-  "lint-staged": {
-    "*.{ts,js,json,md}": [
-      "prettier --write"
-    ],
-    "*.{ts,js}": [
-      "eslint --fix"
-    ]
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
   }
 }

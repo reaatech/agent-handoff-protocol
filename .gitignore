@@ -6,6 +6,12 @@ node_modules/
 dist/
 *.tsbuildinfo
 
+# Stray build output in source (misconfigured bundler)
+packages/*/src/**/*.js
+packages/*/src/**/*.js.map
+packages/*/src/**/*.d.ts
+packages/*/src/**/*.d.ts.map
+
 # Project files
 DEV_PLAN.md
 
@@ -34,6 +40,12 @@ Thumbs.db
 
 # Testing
 coverage/
+
+# Turbo
+.turbo/
+
+# Changesets
+.changeset/README.md
 
 # Temporary
 tmp/
