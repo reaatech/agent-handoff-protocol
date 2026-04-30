@@ -1,0 +1,50 @@
+{
+  "name": "@reaatech/agent-handoff-protocol",
+  "version": "0.1.0",
+  "description": "Complete Agent Handoff Protocol - orchestration layer with full handoff lifecycle",
+  "license": "MIT",
+  "author": "Rick Somers <rick@reaatech.com> (https://reaatech.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reaatech/agent-handoff-protocol.git",
+    "directory": "packages/protocol"
+  },
+  "homepage": "https://github.com/reaatech/agent-handoff-protocol/tree/main/packages/protocol#readme",
+  "bugs": {
+    "url": "https://github.com/reaatech/agent-handoff-protocol/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "benchmark": "vitest bench",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@reaatech/agent-handoff": "workspace:*",
+    "@reaatech/agent-handoff-compression": "workspace:*",
+    "@reaatech/agent-handoff-routing": "workspace:*",
+    "@reaatech/agent-handoff-transport": "workspace:*",
+    "@reaatech/agent-handoff-validation": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}
