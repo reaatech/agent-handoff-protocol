@@ -5,15 +5,11 @@
  * using typed event hooks on HandoffManager.
  */
 
-import {
-  HandoffError,
-  type HandoffManager,
-  createHandoffConfig,
-} from '@reaatech/agent-handoff-protocol';
+import { HandoffError, type HandoffManager } from '@reaatech/agent-handoff-protocol';
 
 // Assume manager is already constructed (see basic-handoff.ts)
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function setupObservability(manager: HandoffManager) {
+function _setupObservability(manager: HandoffManager) {
   manager.on('handoffStart', ({ handoffId, sessionId, trigger }) => {
     console.log(`[${handoffId}] Handoff started for session ${sessionId}`);
     console.log(`  Trigger: ${trigger.type}`);

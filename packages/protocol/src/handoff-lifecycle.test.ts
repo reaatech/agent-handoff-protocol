@@ -1,10 +1,8 @@
-import { createHandoffConfig } from '@reaatech/agent-handoff';
 import type { AgentCapabilities, CompressedContext, HandoffContext } from '@reaatech/agent-handoff';
+import { createHandoffConfig } from '@reaatech/agent-handoff';
 import { HybridCompressor } from '@reaatech/agent-handoff-compression';
 import { CapabilityBasedRouter } from '@reaatech/agent-handoff-routing';
-import { TransportFactory } from '@reaatech/agent-handoff-transport';
-import { MCPTransport } from '@reaatech/agent-handoff-transport';
-import { A2ATransport } from '@reaatech/agent-handoff-transport';
+import { A2ATransport, MCPTransport, TransportFactory } from '@reaatech/agent-handoff-transport';
 import { describe, expect, it, vi } from 'vitest';
 import { HandoffManager } from './handoff-manager.js';
 

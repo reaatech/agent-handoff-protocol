@@ -7,11 +7,11 @@
 
 import {
   CapabilityBasedRouter,
+  createHandoffConfig,
   HandoffManager,
   HybridCompressor,
   MCPTransport,
   TransportFactory,
-  createHandoffConfig,
 } from '@reaatech/agent-handoff-protocol';
 
 // 1. Create your MCP client (from @modelcontextprotocol/sdk or your own)

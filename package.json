@@ -18,7 +18,15 @@
     "release": "turbo run build && changeset publish",
     "benchmark": "turbo run benchmark"
   },
-  "keywords": ["agent", "handoff", "mcp", "a2a", "multi-agent", "routing", "orchestration"],
+  "keywords": [
+    "agent",
+    "handoff",
+    "mcp",
+    "a2a",
+    "multi-agent",
+    "routing",
+    "orchestration"
+  ],
   "author": "Rick Somers <rick@reaatech.com> (https://reaatech.com)",
   "license": "MIT",
   "packageManager": "pnpm@10.22.0",
@@ -41,6 +49,9 @@
     "vitest": "^3.1.1"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild"
+    ]
   }
 }

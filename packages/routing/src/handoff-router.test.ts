@@ -1,5 +1,5 @@
-import { createHandoffConfig } from '@reaatech/agent-handoff';
 import type { AgentCapabilities, HandoffPayload } from '@reaatech/agent-handoff';
+import { createHandoffConfig } from '@reaatech/agent-handoff';
 import { describe, expect, it } from 'vitest';
 import { CapabilityBasedRouter } from './handoff-router.js';
 

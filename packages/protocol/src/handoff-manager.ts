@@ -6,17 +6,15 @@ import type {
   HandoffOptions,
   HandoffResult,
   HandoffRouter,
+  HandoffTrigger,
+  RoutingDecision,
 } from '@reaatech/agent-handoff';
 import { TypedEventEmitter } from '@reaatech/agent-handoff';
 import { HybridCompressor } from '@reaatech/agent-handoff-compression';
-import { AgentRegistry } from '@reaatech/agent-handoff-routing';
-import { CapabilityBasedRouter } from '@reaatech/agent-handoff-routing';
+import { AgentRegistry, CapabilityBasedRouter } from '@reaatech/agent-handoff-routing';
 import { TransportFactory } from '@reaatech/agent-handoff-transport';
 import { HandoffValidator } from '@reaatech/agent-handoff-validation';
 import { HandoffExecutor } from './handoff-executor.js';
-
-import type { HandoffTrigger } from '@reaatech/agent-handoff';
-import type { RoutingDecision } from '@reaatech/agent-handoff';
 
 export interface HandoffEventMap {
   handoffStart: {

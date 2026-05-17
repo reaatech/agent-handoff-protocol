@@ -1,4 +1,3 @@
-import { createHandoffConfig } from '@reaatech/agent-handoff';
 import type {
   AgentCapabilities,
   ContextCompressor,
@@ -6,8 +5,9 @@ import type {
   HandoffRouter,
   TransportLayer,
 } from '@reaatech/agent-handoff';
+import { createHandoffConfig } from '@reaatech/agent-handoff';
 import type { TransportFactory } from '@reaatech/agent-handoff-transport';
-import { type Mock, describe, expect, it, vi } from 'vitest';
+import { describe, expect, it, type Mock, vi } from 'vitest';
 import { HandoffManager } from './handoff-manager.js';
 
 function createAgent(overrides?: Partial<AgentCapabilities>): AgentCapabilities {
