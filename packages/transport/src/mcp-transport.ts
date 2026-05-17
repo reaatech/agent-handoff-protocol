@@ -6,8 +6,7 @@ import type {
   TransportCapabilities,
   TransportLayer,
 } from '@reaatech/agent-handoff';
-import { TransportError } from '@reaatech/agent-handoff';
-import { pickDefined } from '@reaatech/agent-handoff';
+import { pickDefined, TransportError } from '@reaatech/agent-handoff';
 import { validateAgentCapabilitiesManual } from '@reaatech/agent-handoff-validation';
 
 export interface MCPClient {

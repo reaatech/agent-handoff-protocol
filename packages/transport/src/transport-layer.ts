@@ -5,5 +5,4 @@ import type {
   TransportLayer,
 } from '@reaatech/agent-handoff';
 
-export type { TransportLayer, TransportCapabilities };
-export type { HandoffRequest, HandoffResponse };
+export type { HandoffRequest, HandoffResponse, TransportCapabilities, TransportLayer };

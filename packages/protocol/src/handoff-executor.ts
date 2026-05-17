@@ -8,10 +8,9 @@ import type {
   HandoffRouter,
   PrimaryRoute,
   RoutingDecision,
+  TypedEventEmitter,
 } from '@reaatech/agent-handoff';
-import { HandoffError, ValidationError } from '@reaatech/agent-handoff';
-import { pickDefined } from '@reaatech/agent-handoff';
-import type { TypedEventEmitter } from '@reaatech/agent-handoff';
+import { HandoffError, pickDefined, ValidationError } from '@reaatech/agent-handoff';
 import type { TransportFactory } from '@reaatech/agent-handoff-transport';
 import type { HandoffValidator } from '@reaatech/agent-handoff-validation';
 import type { HandoffEventMap } from './handoff-manager.js';

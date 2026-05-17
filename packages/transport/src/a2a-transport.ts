@@ -5,9 +5,7 @@ import type {
   TransportCapabilities,
   TransportLayer,
 } from '@reaatech/agent-handoff';
-import { TransportError, ValidationError } from '@reaatech/agent-handoff';
-import { pickDefined } from '@reaatech/agent-handoff';
-import { withRetry } from '@reaatech/agent-handoff';
+import { pickDefined, TransportError, ValidationError, withRetry } from '@reaatech/agent-handoff';
 import { validateAgentCapabilitiesManual } from '@reaatech/agent-handoff-validation';
 
 export interface HttpClient {

@@ -1,4 +1,3 @@
-import { TypedEventEmitter } from '@reaatech/agent-handoff';
 import type {
   AgentCapabilities,
   ContextCompressor,
@@ -7,6 +6,7 @@ import type {
   RoutingDecision,
   TransportLayer,
 } from '@reaatech/agent-handoff';
+import { TypedEventEmitter } from '@reaatech/agent-handoff';
 import type { TransportFactory } from '@reaatech/agent-handoff-transport';
 import { HandoffValidator } from '@reaatech/agent-handoff-validation';
 import { describe, expect, it, vi } from 'vitest';
