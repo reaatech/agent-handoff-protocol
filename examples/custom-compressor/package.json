@@ -10,7 +10,7 @@
     "@reaatech/agent-handoff-protocol": "workspace:*"
   },
   "devDependencies": {
-    "tsx": "^4.22.1",
+    "tsx": "^4.22.3",
     "typescript": "^5.8.3"
   }
 }
