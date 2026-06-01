@@ -30,7 +30,7 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
       vitest:
-        specifier: ^3.1.1
+        specifier: 3.2.4
         version: 3.2.4(@types/node@25.8.0)(tsx@4.22.1)
 
   examples/basic-handoff:
@@ -98,7 +98,7 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
       vitest:
-        specifier: ^3.1.1
+        specifier: 3.2.4
         version: 3.2.4(@types/node@25.8.0)(tsx@4.22.1)
 
   packages/core:
@@ -110,7 +110,7 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
       vitest:
-        specifier: ^3.1.1
+        specifier: 3.2.4
         version: 3.2.4(@types/node@25.8.0)(tsx@4.22.1)
 
   packages/protocol:
@@ -138,7 +138,7 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
       vitest:
-        specifier: ^3.1.1
+        specifier: 3.2.4
         version: 3.2.4(@types/node@25.8.0)(tsx@4.22.1)
 
   packages/routing:
@@ -154,7 +154,7 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
       vitest:
-        specifier: ^3.1.1
+        specifier: 3.2.4
         version: 3.2.4(@types/node@25.8.0)(tsx@4.22.1)
 
   packages/transport:
@@ -173,7 +173,7 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
       vitest:
-        specifier: ^3.1.1
+        specifier: 3.2.4
         version: 3.2.4(@types/node@25.8.0)(tsx@4.22.1)
 
   packages/validation:
@@ -192,7 +192,7 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
       vitest:
-        specifier: ^3.1.1
+        specifier: 3.2.4
         version: 3.2.4(@types/node@25.8.0)(tsx@4.22.1)
 
 packages:
